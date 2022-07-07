@@ -1,7 +1,7 @@
 // node server which will handle socket io connections
 const io = require("socket.io")();
 const users = {};
-
+var port = process.env.PORT || 3001;
  io.on('connection', socket=>{
      socket.on('new-user-joined', name=>{
          console.log("New user", name);
