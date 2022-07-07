@@ -3,7 +3,7 @@ const socket = io();
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
 const messageContainer = document.querySelector('.container')
-
+var port = process.env.PORT || 3001;
 var audio = new Audio('ting.mp3');
 
 const append = (message, position)=>{
